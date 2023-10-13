@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+/* Track (the area behind the thumb) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: var(--attention-color);
+  border-radius: 5px;
+}
+
+/* Track when it is hovered */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--atention-hover);
+}
+
+/* default element styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition-property: all;
+  transition-duration: 0.3s;
+  font-family: "Varela Round", sans-serif;
+}
+
+body {
+  background-color: var(--bg-regular);
+  overflow-x: hidden;
+}
+
+button {
+  padding: 1.3em;
+  padding-left: 2.3em;
+  padding-right: 2.3em;
+  font-size: medium;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+}
+
+section {
+  position: relative;
+  padding: 10rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+form {
+  padding: 2rem;
+}
+
+select,
+input {
+  padding: 1em;
+  margin-top: 0.5em;
+}
+
+/* element classes */
+.btn-action {
+  color: white;
+  background-color: var(--attention-color);
+  box-shadow: -1px 10px 34px -16px rgb(245, 74, 97);
+}
+
+.btn-action:hover {
+  background-color: var(--atention-hover);
+  box-shadow: -1px 10px 34px -11px rgb(245, 74, 97);
+  transform: translate(0, -5px);
+}
+
+.btn-black {
+  color: white;
+  background-color: black;
+  border: 2px solid black;
+}
+
+.btn-black:hover {
+  color: black;
+  background-color: inherit;
+}
+
+.p-faint {
+  color: var(--p-faint);
+}
+
+.required {
+  color: red;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* variables */
+:root {
+  --attention-color: rgb(245, 74, 97);
+  --atention-hover: rgb(175, 19, 40);
+  --bg-regular: rgb(248, 248, 248);
+  --p-faint: rgb(63, 63, 63);
+  --list-tem-bg: rgb(233, 233, 233);
+}
+
+/* nav styles */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-regular);
+  z-index: 2;
+}
+
+/* logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 1em;
+}
+
+.logo h3 {
+  color: var(--attention-color);
+}
+
+.logo h3 span {
+  color: black;
+}
+
+/* navbar */
+#nav-close {
+  display: none;
+}
+
+/* class to toggle the navbar */
+.show-nav {
+  top: 100%;
+}
+
+#nav-open {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  transition-property: all;
+  transition-duration: 0.7s;
+  z-index: 1;
+}
+
+nav ul li {
+  padding: 1em;
+  font-weight: 600;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav ul li a:hover {
+  color: var(--attention-color);
+}
+
+.left {
+  width: 50%;
+}
+
+.left h1 {
+  font-size: 4rem;
+}
+
+.left h1 span {
+  color: var(--attention-color);
+}
+
+/* header/banner styles */
+.left p {
+  font-size: larger;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.left div button {
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+
+.left div button i {
+  margin-left: 0.5em;
+}
+
+.right {
+  width: 50%;
+}
+
+.right img {
+  width: 100%;
+  min-width: 30rem;
+  height: auto;
+  z-index: 5;
+}
+
+.hero-bg {
+  position: absolute;
+  top: -19%;
+  right: 0;
+  z-index: -5;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: auto;
+}
+
+/* book a ride form styles */
+.book-ride {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: -1px 10px 16px -3px rgba(165, 153, 153, 0.67);
+}
+
+.book-ride div h3 {
+  white-space: nowrap;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.row1,
+.row2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 1em;
+}
+
+.row1 div,
+.row2 div {
+  padding: 1em;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.row1 div label,
+.row2 div label {
+  font-weight: bold;
+}
+
+/* quick and easy step styles */
+.sect3 div {
+  padding: 1em;
+}
+
+.rent-steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.per-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.per-step div {
+  border-radius: 50%;
+  background-color: rgb(241, 223, 225);
+  width: 6rem;
+  height: 6rem;
+}
+
+.per-step div img {
+  height: auto;
+  display: block;
+}
+
+.per-step h1 {
+  white-space: nowrap;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.per-step p {
+  text-align: center;
+  width: 14rem;
+}
+
+/* rental fleet styles */
+.fleet-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+  width: 100%;
+}
+
+.txt {
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fleet-info ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+}
+
+.fleet-info ul li {
+  padding: 1em;
+  background-color: var(--list-tem-bg);
+  margin: 0.1em;
+  font-size: larger;
+  font-weight: 600;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.fleet-info ul li:active {
+  background-color: var(--attention-color);
+  color: white;
+}
+
+.fleet-info ul li:hover {
+  background-color: var(--attention-color);
+  color: white;
+}
+
+.car-table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#car-container {
+  width: 70%;
+  max-width: 600px;
+  min-width: 600px;
+  max-height: 400px;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#car-container img {
+  width: 100%;
+  min-width: 500px;
+  height: auto;
+}
+
+#car-details-table {
+  width: 30%;
+}
+
+#car-details-table p {
+  white-space: nowrap;
+  background-color: var(--attention-color);
+  color: white;
+  padding-right: 1em;
+}
+
+#car-details-table table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: inherit;
+  margin-top: 1em;
+}
+
+#car-details-table tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#car-details-table tr:nth-child(odd) {
+  background-color: var(--list-tem-bg);
+}
+
+#car-details-table th {
+  padding: 0.5em;
+  width: 50%;
+}
+
+#car-details-table td {
+  padding: 0.5em;
+  width: 50%;
+}
+
+#car-details-table button {
+  width: 90%;
+  margin: 1em;
+  border-radius: 0px;
+  box-shadow: 10px 10px 5px 0px var(--list-tem-bg);
+}
+
+/* media querries */
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+    padding: 1em;
+    background-color: var(--bg-regular);
+  }
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: -600%;
+    left: 30%;
+    right: 30%;
+    background-color: var(--bg-regular);
+  }
+
+  .p-faint {
+    text-align: center;
+  }
+
+  #nav-open {
+    display: initial;
+    position: absolute;
+  }
+
+  section {
+    padding: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .hero-bg {
+    display: none;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .left {
+    padding-top: 10rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left p {
+    width: 60%;
+  }
+
+  .left div button {
+    margin-right: 0;
+  }
+
+  .header-btn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .book-ride {
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+  .row1,
+  .row2 {
+    flex-direction: column;
+  }
+  .row1 div,
+  .row2 div {
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rent-steps {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .txt {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  }
+
+  .fleet-info {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .fleet-info ul {
+    width: 100%;
+    text-align: center;
+    margin: 2em;
+  }
+
+  .fleet-info ul li {
+    width: 50%;
+  }
+
+  .car-table-container {
+    flex-direction: column;
+  }
+
+  #car-container {
+    width: 100%;
+  }
+
+  #car-container img {
+    width: 60%;
+  }
+
+  #car-details-table {
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    justify-content: space-between;
+    padding: 1em;
+  }
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: -600%;
+    left: 30%;
+    right: 30%;
+  }
+
+  #nav-open {
+    display: initial;
+  }
+  section {
+    padding: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  .sect1 {
+    padding-top: 10rem;
+  }
+
+  .right {
+    width: 30%;
+  }
+
+  .left {
+    width: 70%;
+    text-align: left;
+  }
+
+  .book-ride {
+    flex-direction: column;
+    margin-top: 11rem;
+  }
+
+  .fleet-info {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .fleet-info ul {
+    width: 100%;
+    text-align: center;
+    margin: 2em;
+  }
+
+  .fleet-info ul li {
+    width: 50%;
+  }
+
+  .car-table-container {
+    flex-direction: column;
+  }
+
+  #car-container {
+    width: 100%;
+  }
+
+  #car-details-table {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+  section {
+    padding: 3rem;
+  }
+
+  .sect1 {
+    padding-top: 10rem;
+    margin-bottom: 3rem;
+  }
+
+  .right {
+    width: 30%;
+  }
+
+  .left {
+    width: 70%;
+    text-align: left;
+  }
+
+  .fleet-info {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .fleet-info ul {
+    width: 100%;
+    text-align: center;
+    margin: 2em;
+  }
+
+  .fleet-info ul li {
+    width: 50%;
+  }
+}
