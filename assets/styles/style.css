@@ -594,7 +594,7 @@ nav ul li a:hover {
   position: relative;
   width: 40%;
   max-width: 500px;
-  min-width: 400px;
+  /* min-width: 400px; */
   padding: 2rem;
   box-shadow: 0px 9px 19px 0px rgba(197, 194, 194, 0.5);
 }
