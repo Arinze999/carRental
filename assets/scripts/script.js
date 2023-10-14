@@ -12,6 +12,30 @@ const carDetails = Array.from(roughTd);
 const toPay = document.getElementById("price");
 const carImage = document.getElementById("car-select");
 
+// animations
+const formSlide = document.querySelector(".book-ride");
+
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+      rect.right >= 0 &&
+      rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function handleScroll() {
+  if (isElementInViewport(formSlide)) {
+      formSlide.classList.add('visible');
+      window.removeEventListener('scroll', handleScroll);
+  }
+}
+
+window.addEventListener('scroll', handleScroll);
+
+
+
+
+
 // car details array of objects
 const carListDetails = [
   {
