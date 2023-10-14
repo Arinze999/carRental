@@ -105,6 +105,20 @@ input {
   padding: 0.5rem;
 }
 
+.title2 {
+  font-size: 3rem;
+  text-align: left;
+  padding: 0.5rem;
+  padding-left: 0;
+}
+
+.subtitle2 {
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 0.5rem;
+  padding-left: 0;
+}
+
 .sect1 {
   margin-bottom: 2rem;
 }
@@ -121,7 +135,8 @@ input {
   --bg-regular: rgb(248, 248, 248);
   --p-faint: rgb(63, 63, 63);
   --list-tem-bg: rgb(233, 233, 233);
-  --poster-bg:rgb(45,45,45);
+  --poster-bg: rgb(45, 45, 45);
+  --icon-bg:rgb(241, 223, 225);
 }
 
 /* nav styles */
@@ -319,7 +334,7 @@ nav ul li a:hover {
 
 .per-step div {
   border-radius: 50%;
-  background-color: rgb(241, 223, 225);
+  background-color: var(--icon-bg);
   width: 6rem;
   height: 6rem;
 }
@@ -341,6 +356,10 @@ nav ul li a:hover {
 }
 
 /* rental fleet styles */
+.rental-fleet {
+  margin-bottom: 3rem;
+}
+
 .fleet-info {
   display: flex;
   justify-content: center;
@@ -356,7 +375,6 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
 }
-
 
 .fleet-info ul {
   list-style-type: none;
@@ -469,6 +487,82 @@ nav ul li a:hover {
   color: var(--attention-color);
 }
 
+/* cars bg poster styles */
+.hero-bg2 {
+  position: absolute;
+  right: 1%;
+  top: 30%;
+}
+
+.hero-bg3 {
+  position: absolute;
+  left: 1%;
+  top: 30%;
+}
+
+.cars-bg-poster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cars-bg-poster img {
+  width: 100%;
+  height: auto;
+}
+
+.choose-us-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose-us {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+.choose-child {
+  width: 40%;
+}
+
+.choose-us button {
+  margin-top: 2em;
+}
+
+.choose-us-step {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+.choose-us-step p,
+.choose-us-step h1,
+.choose-us-step div {
+  padding: 0.3rem;
+}
+
+.choose-icon {
+  border-radius: 50%;
+  background-color: var(--icon-bg);
+  max-width: 250px;
+  max-height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose-icon img {
+  height: auto;
+  display: block;
+}
+
 /* media querries */
 @media (max-width: 768px) {
   body {
@@ -506,7 +600,6 @@ nav ul li a:hover {
     padding-top: 0;
     padding-bottom: 0;
   }
-
 
   .hero-bg {
     display: none;
@@ -562,8 +655,8 @@ nav ul li a:hover {
   }
 
   .txt {
-  padding-left: 15%;
-  padding-right: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 
   .fleet-info {
@@ -598,6 +691,44 @@ nav ul li a:hover {
   #car-details-table {
     width: 85%;
   }
+
+  .cars-bg-poster img {
+    width: 80%;
+  }
+
+  .hero-bg2 {
+   display: none;
+  }
+  
+  .hero-bg3 {
+    display: none;
+  }
+
+  .choose-us {
+    flex-direction: column;
+  }
+
+  .choose-child {
+    width: 100%;
+  }
+
+  .subtitle2 {
+    text-align: center;
+  }
+
+  .title2 {
+    text-align: center;
+  }
+
+  .find-details-button {
+    text-align: center;
+  }
+
+  .choose-us-step {
+    flex-direction: column;
+    text-align: center;
+  }
+  
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -629,7 +760,6 @@ nav ul li a:hover {
     padding-top: 0;
     padding-bottom: 0;
   }
-
 
   .right {
     width: 30%;
@@ -671,6 +801,48 @@ nav ul li a:hover {
   #car-details-table {
     width: 60%;
   }
+
+  .hero-bg2 {
+   display: none;
+  }
+  
+  .hero-bg3 {
+    display: none;
+  }
+
+  .choose-us {
+    flex-direction: column;
+  }
+
+  .choose-child {
+    width: 100%;
+  }
+
+  .subtitle2 {
+    text-align: center;
+  }
+
+  .title2 {
+    text-align: center;
+  }
+
+  .find-details-button {
+    text-align: center;
+  }
+
+  .choose-us-step {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rdc {
+    text-align: center;
+  }
+
+  .rdc2 {
+    margin-left: 20%;
+    margin-right: 20% ;
+   }
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
@@ -706,4 +878,50 @@ nav ul li a:hover {
   .fleet-info ul li {
     width: 50%;
   }
+
+  
+  .hero-bg2 {
+    display: none;
+   }
+   
+   .hero-bg3 {
+     display: none;
+   }
+ 
+   .choose-us {
+     flex-direction: column;
+   }
+ 
+   .choose-child {
+     width: 100%;
+   }
+ 
+   .subtitle2 {
+     text-align: center;
+   }
+ 
+   .title2 {
+     text-align: center;
+   }
+ 
+   .find-details-button {
+     text-align: center;
+   }
+ 
+   .choose-us-step {
+     flex-direction: column;
+     text-align: center;
+   }
+ 
+   .rdc {
+     text-align: center;
+     padding-left: 20%;
+     padding-right: 20% ;
+   }
+
+   .rdc2 {
+    margin-left: 20%;
+    margin-right: 20% ;
+   }
+  
 }
