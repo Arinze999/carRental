@@ -349,6 +349,7 @@ nav ul li a:hover {
   align-items: center;
 }
 
+
 .fleet-info ul {
   list-style-type: none;
   display: flex;
@@ -532,8 +533,8 @@ nav ul li a:hover {
   }
 
   .txt {
-  padding-left: 7rem;
-  padding-right: 7rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
   }
 
   .fleet-info {
