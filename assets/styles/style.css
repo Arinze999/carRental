@@ -43,14 +43,12 @@ button {
 
 section {
   position: relative;
-  padding: 10rem;
+  padding: 8rem;
   padding-left: 20rem;
   padding-right: 20rem;
-  padding-bottom: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1em;
 }
 
 form {
@@ -114,6 +112,7 @@ input {
   --bg-regular: rgb(248, 248, 248);
   --p-faint: rgb(63, 63, 63);
   --list-tem-bg: rgb(233, 233, 233);
+  --poster-bg:rgb(45,45,45);
 }
 
 /* nav styles */
@@ -449,6 +448,18 @@ nav ul li a:hover {
   box-shadow: 10px 10px 5px 0px var(--list-tem-bg);
 }
 
+.poster {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--poster-bg);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  color: white;
+}
+.poster span {
+  color: var(--attention-color);
+}
+
 /* media querries */
 @media (max-width: 768px) {
   body {
@@ -560,16 +571,17 @@ nav ul li a:hover {
   }
 
   #car-container {
-    border: 1px solid red;
-    width: 10%;
+    max-width: 80%;
+    min-width: 80%;
   }
 
   #car-container img {
-    max-width: 2rem;
+    width: 100%;
+    min-width: 100%;
   }
 
   #car-details-table {
-    width: 100%;
+    width: 70%;
   }
 }
 
