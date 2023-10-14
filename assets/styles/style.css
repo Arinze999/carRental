@@ -109,6 +109,11 @@ input {
   margin-bottom: 2rem;
 }
 
+.sectp-0 {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
 /* variables */
 :root {
   --attention-color: rgb(245, 74, 97);
@@ -497,6 +502,12 @@ nav ul li a:hover {
     margin-bottom: 5rem;
   }
 
+  .sectp-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+
   .hero-bg {
     display: none;
   }
@@ -613,6 +624,12 @@ nav ul li a:hover {
   .sect1 {
     padding-top: 10rem;
   }
+
+  .sectp-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
 
   .right {
     width: 30%;
