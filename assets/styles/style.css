@@ -451,6 +451,9 @@ nav ul li a:hover {
 
 /* media querries */
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   nav {
     justify-content: space-between;
     padding: 1em;
