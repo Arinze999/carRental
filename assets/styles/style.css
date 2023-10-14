@@ -532,8 +532,8 @@ nav ul li a:hover {
   }
 
   .txt {
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 7rem;
+  padding-right: 7rem;
   }
 
   .fleet-info {
@@ -560,7 +560,7 @@ nav ul li a:hover {
   }
 
   #car-container img {
-    width: 60%;
+    width: 40%;
   }
 
   #car-details-table {
