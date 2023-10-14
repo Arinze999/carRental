@@ -105,6 +105,10 @@ input {
   padding: 0.5rem;
 }
 
+.sect1 {
+  margin-bottom: 2rem;
+}
+
 /* variables */
 :root {
   --attention-color: rgb(245, 74, 97);
@@ -563,7 +567,7 @@ nav ul li a:hover {
   }
 
   .fleet-info ul li {
-    width: 50%;
+    width: 66%;
   }
 
   .car-table-container {
@@ -571,8 +575,8 @@ nav ul li a:hover {
   }
 
   #car-container {
-    max-width: 80%;
-    min-width: 80%;
+    max-width: 90%;
+    min-width: 90%;
   }
 
   #car-container img {
@@ -581,7 +585,7 @@ nav ul li a:hover {
   }
 
   #car-details-table {
-    width: 70%;
+    width: 85%;
   }
 }
 
