@@ -560,15 +560,16 @@ nav ul li a:hover {
   }
 
   #car-container {
-    width: 100%;
+    border: 1px solid red;
+    width: 10%;
   }
 
   #car-container img {
-    width: 40%;
+    max-width: 2rem;
   }
 
   #car-details-table {
-    width: 60%;
+    width: 100%;
   }
 }
 
