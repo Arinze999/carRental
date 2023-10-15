@@ -57,6 +57,18 @@ section {
   overflow-x: hidden;
 }
 
+footer {
+  position: relative;
+  padding: 8rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 form {
   padding: 2rem;
 }
@@ -400,6 +412,7 @@ nav ul li a:hover {
   font-weight: 600;
   width: 100%;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .fleet-info ul li:active {
@@ -683,6 +696,7 @@ nav ul li a:hover {
   padding: 1em;
   font-size: larger;
   position: relative;
+  cursor: pointer;
 }
 
 .faq-questions ul li i {
@@ -719,21 +733,70 @@ nav ul li a:hover {
   left: 45%;
   right: 45%;
   transform: translate(-50%, -50%);
-  animation: rotate 5s linear infinite; 
+  animation: rotate 5s linear infinite;
 }
 
 @keyframes rotate {
   from {
-    transform: rotateY(0deg); 
+    transform: rotateY(0deg);
   }
   to {
-    transform: rotateY(360deg); 
+    transform: rotateY(360deg);
   }
 }
 
 .faq-img img {
   width: 100%;
   height: auto;
+}
+
+/* our team styles */
+.team-section {
+  flex-direction: column;
+}
+
+#our-team {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.team-card {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 12px 19px -6px rgb(182, 179, 179);
+}
+
+.card-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.card-dp {
+  width: 100%;
+  height: 20rem;
+  background-color: var(--bg-darker);
+  overflow: hidden;
+}
+
+.card-dp img {
+  max-width: 100%;
+  height: auto;
+}
+
+.team-card h1,
+.team-card small {
+  text-align: center;
+  padding: 1rem;
 }
 
 /* app section styles */
@@ -749,7 +812,8 @@ nav ul li a:hover {
   width: 100%;
 }
 
-.left-app , .right-app {
+.left-app,
+.right-app {
   width: 50%;
 }
 
@@ -768,6 +832,31 @@ nav ul li a:hover {
 .right-app img {
   width: 100%;
   height: auto;
+}
+
+/* footer styles */
+footer div {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+footer h1,
+footer p,
+footer strong {
+  /* text-align: left; */
+  padding: 1rem;
+}
+
+footer form div {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+footer input {
+  width: 100%;
 }
 
 /* media querries */
@@ -950,7 +1039,7 @@ nav ul li a:hover {
     margin-bottom: 2rem;
   }
 
-  .faq-questions ul  {
+  .faq-questions ul {
     margin: 0;
     padding: 0;
     margin-top: 2em;
@@ -975,7 +1064,8 @@ nav ul li a:hover {
     flex-direction: column;
   }
 
-  .left-app , .right-app {
+  .left-app,
+  .right-app {
     width: 100%;
   }
 
@@ -987,7 +1077,22 @@ nav ul li a:hover {
     margin-right: 0;
     margin-bottom: 2rem;
   }
-  
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  footer div {
+    width: 100%;
+    align-items: center;
+  }
+  /* .sect1 {
+    padding-top: 0;
+    border: 1px solid red;
+  } */
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -1121,7 +1226,8 @@ nav ul li a:hover {
     flex-direction: column;
   }
 
-  .left-app , .right-app {
+  .left-app,
+  .right-app {
     width: 100%;
   }
   .left-app div {
@@ -1131,6 +1237,18 @@ nav ul li a:hover {
   .left-app div img {
     margin-right: 0;
     margin-bottom: 2rem;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  footer div {
+    width: 30%;
+    align-items: center;
   }
 }
 
@@ -1216,17 +1334,29 @@ nav ul li a:hover {
     display: none;
   }
 
-  .left-app .title2 , .left-app .subtitle2{
+  .left-app .title2,
+  .left-app .subtitle2 {
     text-align: left;
   }
 
+  footer {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  footer div {
+    width: 30%;
+    align-items: center;
+  }
 }
 
 /* animation styles */
 .close-book {
   width: 0;
   opacity: 0;
-  transition: all 2s ease;
+  transition: all 1.5s ease;
 }
 
 .open-book {
@@ -1237,13 +1367,13 @@ nav ul li a:hover {
 .fade-in-left {
   opacity: 0;
   transform: translateX(-100%);
-  transition: all 2s ease;
+  transition: all 1.5s ease;
 }
 
 .fade-in-right {
   opacity: 0;
   transform: translateX(100%);
-  transition: all 2s ease;
+  transition: all 1.5s ease;
 }
 
 .fade-in-bottom {
