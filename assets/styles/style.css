@@ -736,6 +736,39 @@ nav ul li a:hover {
   height: auto;
 }
 
+/* app section styles */
+.app-section {
+  background-color: var(--bg-darker);
+}
+
+.about-app {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.left-app , .right-app {
+  width: 50%;
+}
+
+.left-app div {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.left-app div img {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.right-app img {
+  width: 100%;
+  height: auto;
+}
 
 /* media querries */
 @media (max-width: 768px) {
@@ -937,6 +970,23 @@ nav ul li a:hover {
     left: 43%;
     right: 43%;
   }
+
+  .about-app {
+    flex-direction: column;
+  }
+
+  .left-app , .right-app {
+    width: 100%;
+  }
+
+  .left-app div {
+    flex-direction: column;
+  }
+
+  .left-app div img {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
   
 }
 
@@ -1066,6 +1116,22 @@ nav ul li a:hover {
   .faq-img {
     display: none;
   }
+
+  .about-app {
+    flex-direction: column;
+  }
+
+  .left-app , .right-app {
+    width: 100%;
+  }
+  .left-app div {
+    flex-direction: column;
+  }
+
+  .left-app div img {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1600px) {
@@ -1149,6 +1215,11 @@ nav ul li a:hover {
   .faq-img {
     display: none;
   }
+
+  .left-app .title2 , .left-app .subtitle2{
+    text-align: left;
+  }
+
 }
 
 /* animation styles */
