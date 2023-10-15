@@ -14,27 +14,9 @@ const carImage = document.getElementById("car-select");
 
 // animations
 const formSlide = document.querySelector(".book-ride");
-
-function isElementInViewport(el) {
-  const rect = el.getBoundingClientRect();
-  return (
-      rect.right >= 0 &&
-      rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-function handleScroll() {
-  if (isElementInViewport(formSlide)) {
-      formSlide.classList.add('visible');
-      window.removeEventListener('scroll', handleScroll);
-  }
-}
-
-window.addEventListener('scroll', handleScroll);
-
-
-
-
+const fadeInLeft = document.querySelectorAll(".fade-in-left");
+const fadeInRight = document.querySelectorAll(".fade-in-right");
+const fadeInBottom = document.querySelectorAll(".fade-in-bottom");
 
 // car details array of objects
 const carListDetails = [
@@ -131,4 +113,116 @@ carList.map((each) => {
 //navbar responsive function
 navBtn.addEventListener("click", () => {
   navBar.classList.toggle("show-nav");
+});
+
+// opening book animation function
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.right >= 0 &&
+    rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function handleScroll() {
+  if (isElementInViewport(formSlide)) {
+    formSlide.classList.add("open-book");
+    window.removeEventListener("scroll", handleScroll);
+  }
+}
+
+window.addEventListener("scroll", handleScroll);
+
+// fade in fron left animation function
+function fadeInLeftElements() {
+  fadeInLeft.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    const elementBottom = element.getBoundingClientRect().bottom;
+    const isAnimated = element.getAttribute("data-animated") === "true";
+
+    if (!isAnimated && elementTop < window.innerHeight && elementBottom >= 0) {
+      element.style.opacity = 1;
+      element.style.transform = "translateX(0)";
+      element.setAttribute("data-animated", "true");
+    } else if (
+      isAnimated &&
+      (elementTop >= window.innerHeight || elementBottom < 0)
+    ) {
+      element.style.opacity = 0;
+      element.style.transform = "translateX(-100%)";
+      element.setAttribute("data-animated", "false");
+    }
+  });
+}
+
+fadeInLeftElements();
+window.addEventListener("scroll", fadeInLeftElements);
+
+// fade in from right animation function
+function fadeInRightElements() {
+  fadeInRight.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    const elementBottom = element.getBoundingClientRect().bottom;
+    const isAnimated = element.getAttribute("data-animated") === "true";
+
+    if (!isAnimated && elementTop < window.innerHeight) {
+      element.style.opacity = 1;
+      element.style.transform = "translateX(0)";
+      element.setAttribute("data-animated", "true");
+    } else if (
+      isAnimated &&
+      (elementTop >= window.innerHeight || elementBottom < 0)
+    ) {
+      element.style.opacity = 0;
+      element.style.transform = "translateX(100%)";
+      element.setAttribute("data-animated", "false");
+    }
+  });
+}
+
+fadeInRightElements();
+window.addEventListener("scroll", fadeInRightElements);
+
+// fade in from right animation function
+function fadeInBottomElements() {
+  fadeInBottom.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    const elementBottom = element.getBoundingClientRect().bottom;
+    const isAnimated = element.getAttribute("data-animated") === "true";
+
+    if (!isAnimated && elementTop < window.innerHeight) {
+      element.style.opacity = 1;
+      element.style.transform = "translateY(0)";
+      element.setAttribute("data-animated", "true");
+    } else if (
+      isAnimated &&
+      (elementTop >= window.innerHeight || elementBottom < 0)
+    ) {
+      element.style.opacity = 0;
+      element.style.transform = "translatey(30%)";
+      element.setAttribute("data-animated", "false");
+    }
+  });
+}
+
+fadeInBottomElements();
+window.addEventListener("scroll", fadeInBottomElements);
+
+const items = document.querySelectorAll(".item-faq");
+
+items.forEach((item) => {
+  item.addEventListener("click", () => {
+    const description = item.querySelector(".answer");
+    const isOpen = description.style.display === "block";
+
+    // Hide all descriptions
+    items.forEach((i) => {
+      const desc = i.querySelector(".answer");
+      desc.style.display = "none";
+    });
+
+    if (!isOpen) {
+      description.style.display = "block";
+    }
+  });
 });
