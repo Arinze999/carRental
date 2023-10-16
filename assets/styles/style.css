@@ -21,6 +21,23 @@ html {
   scroll-behavior: smooth;
 }
 
+#top {
+  position: fixed;
+  z-index: 20;
+  left: 93%;
+  right: 1%;
+  bottom: 10%;
+  background-color: rgba(245, 74, 97, 0.35);
+}
+
+#top:hover {
+  background-color: rgb(245, 74, 97);
+}
+
+#top a {
+  color: white;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -929,6 +946,12 @@ footer input {
     overflow-x: hidden;
   }
 
+  #top {
+    left: 80%;
+    right: 1%;
+    bottom: 5%;
+  }
+
   nav {
     justify-content: space-between;
     padding: 1em;
@@ -1216,6 +1239,13 @@ footer input {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  
+  #top {
+    left: 85%;
+    right: 1%;
+    bottom: 5%;
+  }
+
   nav {
     justify-content: space-between;
     padding: 1em;

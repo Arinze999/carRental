@@ -21,6 +21,9 @@ const fadeInBottom = document.querySelectorAll(".fade-in-bottom");
 // faq
 const items = document.querySelectorAll(".item-faq");
 
+// form
+const carType = document.getElementById("car-type");
+
 // car details array of objects
 const carListDetails = [
   {
@@ -212,7 +215,6 @@ function fadeInBottomElements() {
 fadeInBottomElements();
 window.addEventListener("scroll", fadeInBottomElements);
 
-
 // function to show answers to FAQ
 items.forEach((item) => {
   item.addEventListener("click", () => {
@@ -230,3 +232,20 @@ items.forEach((item) => {
     }
   });
 });
+
+// function for form cartype options
+var carOptions = [
+  carListDetails[0].carName,
+  carListDetails[1].carName,
+  carListDetails[2].carName,
+  carListDetails[3].carName,
+  carListDetails[4].carName,
+  carListDetails[5].carName,
+];
+
+for (var i = 0; i < carOptions.length; i++) {
+  var options = document.createElement("option");
+  options.text = carOptions[i];
+  options.value = i;
+  carType.appendChild(options);
+}
