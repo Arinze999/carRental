@@ -21,19 +21,19 @@
         <div id="nav-open"><i class="fa-solid fa-chevron-left fa-xl"></i></div>
         <ul id="d-navigate">
           <!-- <li id="nav-close"><i class="fa-solid fa-xmark fa-lg"></i></li> -->
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Car Models</a></li>
-          <li><a href="">Testimonials</a></li>
-          <li><a href="">Our Team</a></li>
-          <li><a href="">Contact</a></li>
-          <li><a href="">Sign In</a></li>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#car-models">Car Models</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#our-teams">Our Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Sign In</a></li>
           <li><button class="btn-action">Register</button></li>
         </ul>
       </div>
     </nav>
     <header>
-      <section class="sect1">
+      <section id="Home" class="sect1">
         <div class="left">
           <p>Plan your trip now</p>
           <h1>
@@ -141,7 +141,7 @@
         </form>
       </section>
 
-      <section class="sectp-0">
+      <section id="about" class="sectp-0">
         <div class="sect3" data-animated="false">
           <div class="fade-in-right">
             <p class="subtitle">Get your trip scheduled</p>
@@ -202,7 +202,7 @@
         </div>
       </section>
 
-      <section class="sectp-0">
+      <section id="car-models" class="sectp-0">
         <div class="rental-fleet">
           <div class="fleet-intro fade-in-bottom">
             <p class="subtitle">Vehicle Models</p>
@@ -348,7 +348,7 @@
         </div>
       </section>
 
-      <section class="testimonial-section">
+      <section id="testimonials" class="testimonial-section">
         <div>
           <div class="testimonial-header fade-in-bottom">
             <p class="subtitle">
@@ -458,7 +458,7 @@
         </div>
       </section>
 
-      <section class="team-section">
+      <section id="our-teams" class="team-section">
         <h1 class="title fade-in-bottom">OUR TEAM</h1>
         <div id="our-team">
           <div class="team-card fade-in-left">
@@ -493,6 +493,55 @@
               </h1>
               <small>Head of Marketing</small>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="contact-essay">
+          <div class="fade-in-bottom">
+            <h1 class="title">
+              Need additional information?
+            </h1>
+            <p class="p-faint">
+              A multifaceted professional skilled in multiple fields of
+              research, development as well as a learning specialist. Over 15
+              years of experience.
+            </p>
+            <br />
+            <strong
+              ><i class="fa-solid fa-phone-volume fa-lg"></i>
+              +234-813-579-6025</strong
+            >
+            <br />
+            <br />
+            <strong
+              ><i class="fa-solid fa-envelope fa-lg"></i>
+              carbuddy@gmail.com</strong
+            >
+            <br />
+            <br />
+            <strong
+              ><i class="fa-solid fa-paper-plane fa-lg"></i> Owerri,
+              Nigeria.</strong
+            >
+          </div>
+          <div class="fade-in-bottom">
+            <form action="#">
+              <label for="full"
+                >Full Name <span class="required">*</span></label
+              >
+              <input id="full" type="text" /> <br />
+              <label for="emai">Email <span class="required">*</span></label>
+              <input id="emai" type="text" /> <br />
+              <label for="gist"
+                >Tell Us More <span class="required">*</span></label
+              >
+              <textarea id="gist" cols="60" rows="10"></textarea>
+              <div class="send-msg">
+                <button class="btn-action">Send Message</button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
