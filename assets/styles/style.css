@@ -57,6 +57,12 @@ section {
   overflow-x: hidden;
 }
 
+header section {
+  padding-top: 15rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+
 footer {
   position: relative;
   padding: 8rem;
@@ -1184,6 +1190,10 @@ footer input {
     margin-bottom: 5rem;
   }
 
+  header section {
+  padding: 0;
+  }
+
   .sect1 {
     padding-top: 10rem;
   }
@@ -1324,6 +1334,10 @@ footer input {
   section {
     padding: 3rem;
   }
+
+  header section {
+    padding: 3rem;
+    }
 
   .sect1 {
     padding-top: 10rem;
