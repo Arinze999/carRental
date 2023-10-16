@@ -935,6 +935,10 @@ footer input {
     align-items: center;
   }
 
+  .left h1 div {
+    white-space: nowrap;
+  }
+
   .left p {
     width: 60%;
   }
