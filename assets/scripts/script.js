@@ -117,7 +117,8 @@ carList.map((each) => {
 });
 
 //navbar responsive function
-navBtn.addEventListener("click", () => {
+navBtn.addEventListener("click", (event) => {
+  event.stopPropagation();
   navBtn.classList.toggle("rotate-nav");
   navBar.classList.toggle("show-nav");
 });
@@ -250,7 +251,7 @@ for (var i = 0; i < carOptions.length; i++) {
   carType.appendChild(options);
 }
 
-window.addEventListener("touchmove", (event) => {
+window.addEventListener("click", (event) => {
   if (event.target !== navBar) {
     if (navBar.classList.contains("show-nav")) {
       navBtn.classList.remove("rotate-nav");
