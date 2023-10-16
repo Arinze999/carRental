@@ -109,6 +109,7 @@ const carListDetails = [
 // function for clicking on each carList item
 carList.map((each) => {
   each.addEventListener("click", () => {
+    loadingAnimation.style.display = "block";
     toPay.innerText = carListDetails[carList.indexOf(each)].rent;
     carImage.setAttribute("src", carListDetails[carList.indexOf(each)].src);
     carDetails[0].innerText = carListDetails[carList.indexOf(each)].model;
@@ -119,6 +120,12 @@ carList.map((each) => {
     carDetails[5].innerText =
       carListDetails[carList.indexOf(each)].transmission;
     carDetails[6].innerText = carListDetails[carList.indexOf(each)].fuel;
+
+    carImage.addEventListener("load", () => {
+      loadingAnimation.style.display = "none";
+      carImage.style.display = "block";
+    });
+
   });
 });
 
