@@ -249,3 +249,12 @@ for (var i = 0; i < carOptions.length; i++) {
   options.value = i;
   carType.appendChild(options);
 }
+
+window.addEventListener("touchmove", (event) => {
+  if (event.target !== navBar) {
+    if (navBar.classList.contains("show-nav")) {
+      navBtn.classList.remove("rotate-nav");
+      navBar.classList.remove("show-nav");
+    }
+  }
+});
