@@ -218,7 +218,6 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  overflow-x: hidden;
 }
 
 nav ul {
@@ -231,6 +230,8 @@ nav ul {
   transition-property: all;
   transition-duration: 0.7s;
   z-index: 1;
+  overflow-x: hidden;
+  border: 1px solid red;
 }
 
 nav ul li {
