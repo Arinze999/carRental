@@ -11,6 +11,12 @@ const roughTd = document
 const carDetails = Array.from(roughTd);
 const toPay = document.getElementById("price");
 const carImage = document.getElementById("car-select");
+const loadingAnimation = document.querySelector(".loader");
+
+carImage.addEventListener("load", () => {
+  loadingAnimation.style.display = "none";
+  carImage.style.display = "block";
+});
 
 // animations
 const formSlide = document.querySelector(".book-ride");
@@ -251,6 +257,7 @@ for (var i = 0; i < carOptions.length; i++) {
   carType.appendChild(options);
 }
 
+// function to make navbar close easier
 window.addEventListener("click", (event) => {
   if (event.target !== navBar) {
     if (navBar.classList.contains("show-nav")) {
