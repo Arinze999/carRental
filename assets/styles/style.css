@@ -218,6 +218,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  overflow-x: hidden;
 }
 
 nav ul {
