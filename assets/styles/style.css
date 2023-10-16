@@ -197,13 +197,21 @@ nav {
 }
 
 /* class to toggle the navbar */
-.show-nav {
-  top: 100%;
-}
-
 #nav-open {
   display: none;
+  transition-property: all;
+  transition-duration: 0.8s;
 }
+
+.rotate-nav {
+   transform: rotateY(180deg);
+}
+
+
+.show-nav {
+  left: 70%;
+}
+
 
 .navbar {
   display: flex;
@@ -863,6 +871,7 @@ footer input {
   width: 100%;
 }
 
+
 /* media querries */
 @media (max-width: 768px) {
   body {
@@ -878,10 +887,17 @@ footer input {
   nav ul {
     flex-direction: column;
     position: absolute;
-    top: -600%;
-    left: 30%;
-    right: 30%;
-    background-color: var(--bg-regular);
+    top: 100%;
+    left: 100%;
+    background-color: rgba(240, 240, 240, 0.9);
+  }
+
+  nav ul li:nth-last-child(2) {
+    display: none;
+  }
+
+  nav ul li:last-child {
+    display: none;
   }
 
   .p-faint {
@@ -1136,10 +1152,23 @@ footer input {
   nav ul {
     flex-direction: column;
     position: absolute;
-    top: -600%;
-    left: 30%;
-    right: 30%;
+    top: 100%;
+    left: 100%;
+    background-color: rgba(240, 240, 240, 0.9);
   }
+
+  nav ul li:nth-last-child(2) {
+    display: none;
+  }
+
+  nav ul li:last-child {
+    display: none;
+  }
+
+  .show-nav {
+    left: 80%;
+  }
+
 
   #nav-open {
     display: initial;

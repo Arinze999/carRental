@@ -18,6 +18,9 @@ const fadeInLeft = document.querySelectorAll(".fade-in-left");
 const fadeInRight = document.querySelectorAll(".fade-in-right");
 const fadeInBottom = document.querySelectorAll(".fade-in-bottom");
 
+// faq
+const items = document.querySelectorAll(".item-faq");
+
 // car details array of objects
 const carListDetails = [
   {
@@ -112,6 +115,7 @@ carList.map((each) => {
 
 //navbar responsive function
 navBtn.addEventListener("click", () => {
+  navBtn.classList.toggle("rotate-nav");
   navBar.classList.toggle("show-nav");
 });
 
@@ -208,8 +212,8 @@ function fadeInBottomElements() {
 fadeInBottomElements();
 window.addEventListener("scroll", fadeInBottomElements);
 
-const items = document.querySelectorAll(".item-faq");
 
+// function to show answers to FAQ
 items.forEach((item) => {
   item.addEventListener("click", () => {
     const description = item.querySelector(".answer");
