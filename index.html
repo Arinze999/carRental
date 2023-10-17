@@ -12,6 +12,94 @@
     <title>car | Buddy</title>
   </head>
   <body>
+
+    <div id="errorMessageModal" class="modal">
+      <div class="modal-content">
+          <p>PLEASE FILL ALL DETAILS!</p>
+      </div>
+  </div>
+
+    <div class="pop-up">
+      <div class="pop-title">
+        <h1>
+          CONFIRM DETAILS <div id="close-pop"><i class="fa-solid fa-xmark fa-lg"></i></div>
+        </h1>
+        <p>
+          After confirming, you'll receive a token to present to the car
+          dispather on his arrival at your chosen pick up location
+        </p>
+      </div>
+      <div class="pop-details">
+        <div>
+          <h3><i class="fa-regular fa-calendar"></i> Pick up Date & Time</h3>
+          <p id="m-pick-date" ></p>
+          <input type="time" />
+          <h3><i class="fa-solid fa-location-dot"></i> Pick up Location</h3>
+          <small id="m-pick-up"></small> <br />
+          <br />
+          <h3><i class="fa-regular fa-calendar"></i> Drop off Date & Time</h3>
+          <p id="m-drop-date"></p>
+          <input type="time" />
+          <h3><i class="fa-solid fa-location-dot"></i> Drop off Location</h3>
+          <small id="m-drop-off"></small>
+        </div>
+        <div>
+          <h3>Car <span id="m-car">Passat</span></h3>
+          <img
+            id="m-car-img"
+            src=""
+            alt="s.car"
+          />
+        </div>
+      </div>
+      <div class="personal-info">
+        <h3 class="subtitle">PERSONAL INFORMATION</h3>
+        <form id="m-personal-form">
+          <div>
+            <label for="">Full Name<span class="required">*</span></label
+            ><br />
+            <input type="text" />
+          </div>
+          <div>
+            <label for="">Phone Number<span class="required">*</span></label
+            ><br />
+            <input type="text" />
+          </div>
+          <div>
+            <label for="">Age<span class="required">*</span></label
+            ><br />
+            <input type="text" />
+          </div>
+          <div>
+            <label for="">Gender<span class="required">*</span></label
+            ><br />
+            <input type="text" />
+          </div>
+          <div class="lent">
+            <label for="">Email<span class="required">*</span></label><br />
+            <input type="text" />
+          </div>
+          <div class="lent">
+            <label for="">Address<span class="required">*</span></label><br />
+            <input type="text" />
+          </div>
+          <div>
+            <label for="">City<span class="required">*</span></label
+            ><br />
+            <input type="text" />
+          </div>
+          <div>
+            <label for="">Zip Code<span class="required">*</span></label
+            ><br />
+            <input type="text" />
+          </div>
+          <div class="lent">
+            <button id="m-confirm" class="btn-action">Confirm</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <nav>
       <div class="logo">
         <img src="assets\img\icons8-car-60.png" alt="" />
@@ -64,7 +152,7 @@
 
     <main>
       <section>
-        <form class="book-ride close-book" action="">
+        <form class="book-ride close-book">
           <div><h3>Book a Car</h3></div>
           <div class="form-row">
             <div class="row1">
@@ -92,9 +180,9 @@
                   ></label
                 >
                 <select id="pick-up">
-                  <option value="abuja">Abuja</option>
-                  <option value="lagos">Lagos</option>
-                  <option value="owerri">Owerri</option>
+                  <option value="Abuja">Abuja</option>
+                  <option value="Lagos">Lagos</option>
+                  <option value="Owerri">Owerri</option>
                 </select>
               </div>
 
@@ -106,32 +194,34 @@
                   ></label
                 >
                 <select id="drop-off">
-                  <option value="abuja">Abuja</option>
-                  <option value="lagos">Lagos</option>
-                  <option value="owerri">Owerri</option>
+                  <option value="Abuja">Abuja</option>
+                  <option value="Lagos">Lagos</option>
+                  <option value="Owerri">Owerri</option>
                 </select>
               </div>
             </div>
             <div class="row2">
               <div>
-                <label for=""
+                <label for="pick-date"
                   ><i class="fa-regular fa-calendar"></i> Pick Up<span
                     class="required"
                     >*</span
                   ></label
                 >
-                <input type="date" />
+                <input id="pick-date" type="date" />
               </div>
               <div>
-                <label for=""
+                <label for="drop-date"
                   ><i class="fa-regular fa-calendar"></i> Drop Off<span
                     class="required"
                     >*</span
                   ></label
                 >
-                <input type="date" />
+                <input id="drop-date" type="date" />
               </div>
-              <div><button class="btn-action">Request</button></div>
+              <div>
+                <button id="request" class="btn-action">Book Now</button>
+              </div>
             </div>
           </div>
         </form>

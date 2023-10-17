@@ -27,8 +27,35 @@ const fadeInBottom = document.querySelectorAll(".fade-in-bottom");
 // faq
 const items = document.querySelectorAll(".item-faq");
 
+// main, haeder, nav
+const mainPage = document.querySelector("main");
+const navMain = document.querySelector("nav");
+const headerMain = document.querySelector("header");
+
+// pop up
+const formModal = document.querySelector(".pop-up");
+const closeForm = document.getElementById("close-pop");
+const modalPickUp = document.getElementById("m-pick-up");
+const modalPickDate = document.getElementById("m-pick-date");
+const modalDropOff = document.getElementById("m-drop-off");
+const modalDropDate = document.getElementById("m-drop-date");
+const modalCar = document.getElementById("m-car");
+const carSrc = document.getElementById("m-car-img");
+const personalInfoModal = document.getElementById("m-personal-form");
+const roughInputs = personalInfoModal.querySelectorAll("input");
+const infoInputs = Array.from(roughInputs);
+const modalConfirm = document.getElementById("m-confirm");
+
+// Error modal elements
+const modal = document.getElementById("errorMessageModal");
+
 // form
 const carType = document.getElementById("car-type");
+const requestBtn = document.getElementById("request");
+const pickUp = document.getElementById("pick-up");
+const dropOff = document.getElementById("drop-off");
+const pickUpDate = document.getElementById("pick-date");
+const dropOffDate = document.getElementById("drop-date");
 
 // car details array of objects
 const carListDetails = [
@@ -266,3 +293,93 @@ window.addEventListener("click", (event) => {
     }
   }
 });
+
+// request modal fubction
+requestBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (
+    !(
+      pickUp.value == "" ||
+      pickUpDate.value == "" ||
+      dropOff.value == "" ||
+      dropOffDate.value == ""
+    )
+  ) {
+    modalPickUp.innerText = pickUp.value;
+    modalPickDate.innerText = pickUpDate.value;
+    modalDropOff.innerText = dropOff.value;
+    modalDropDate.innerText = dropOffDate.value;
+    modalCar.innerText = carListDetails[carType.value].carName;
+    carSrc.setAttribute("src", carListDetails[carType.value].src);
+    navMain.classList.toggle("blurry");
+    headerMain.classList.toggle("blurry");
+    mainPage.classList.toggle("blurry");
+    formModal.classList.toggle("active");
+    if (document.body.style.overflow !== "hidden") {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  } else {
+    modal.style.display = "block";
+    // Hide modal after 2 seconds
+    setTimeout(function() {
+        modal.style.display = "none";
+    }, 1000);
+  }
+});
+
+// close modal pop up function
+closeForm.addEventListener("click", () => {
+  navMain.classList.toggle("blurry");
+  headerMain.classList.toggle("blurry");
+  mainPage.classList.toggle("blurry");
+  formModal.classList.toggle("active");
+  if (document.body.style.overflow !== "hidden") {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+});
+
+// function checking for empty modal input
+function checkInputs(inputElements) {
+  return inputElements.map((input) => input.value.trim() !== "").every(Boolean);
+}
+
+// confirm modal info and book car function
+modalConfirm.addEventListener("click", (e) => {
+  e.preventDefault();
+  const areAllInputsFilled = checkInputs(infoInputs);
+  if (areAllInputsFilled) {
+    alert("CONFIRMED!")
+    navMain.classList.toggle("blurry");
+    headerMain.classList.toggle("blurry");
+    mainPage.classList.toggle("blurry");
+    formModal.classList.toggle("active");
+    carType.value = "";
+    pickUp.value = "";
+    pickUpDate.value = "";
+    dropOff.value = "";
+    dropOffDate.value = "";
+    infoInputs.map((each) => {
+      each.value = "";
+    })
+    if (document.body.style.overflow !== "hidden") {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  } else {
+    modal.style.display = "block";
+    // Hide modal after 2 seconds
+    setTimeout(function() {
+        modal.style.display = "none";
+    }, 1000);
+  }
+});
+
+
+
+
+
