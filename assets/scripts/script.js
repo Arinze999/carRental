@@ -352,13 +352,7 @@ modalConfirm.addEventListener("click", (e) => {
   e.preventDefault();
   const areAllInputsFilled = checkInputs(infoInputs);
   if (areAllInputsFilled) {
-    modal.style.display = "block";
-    modalContent = modal.querySelector(".modal-content");
-    modalContent.innerText = "CONFIRMED SUCCESFULLY";
-    modalContent.style.backgroundColor = "lawngreen";
-    setTimeout(function() {
-        modal.style.display = "none";
-    }, 1000);
+    alert("CONFIRMED!")
     navMain.classList.toggle("blurry");
     headerMain.classList.toggle("blurry");
     mainPage.classList.toggle("blurry");
