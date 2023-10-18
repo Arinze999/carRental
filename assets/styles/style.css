@@ -770,6 +770,46 @@ nav ul li a:hover {
   animation: rotate 5s linear infinite;
 }
 
+/* succes modal styles */
+.success-modal {
+  position: fixed;
+  z-index: 100;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 3px 12px -2px rgba(0,0,0,0.75);
+  opacity: 0;
+  padding: 1rem;
+  top: -100%;
+  left: 35%;
+  width: 30rem;
+  transition-property: all;
+  transition-duration: 0.7s;
+}
+
+.success-modal .s-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.s-info div , .s-box  {
+  padding: 1rem;
+}
+
+.s-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.show-success {
+  top: 10%;
+  opacity: 1;
+}
+
 /* modal styles */
 .pop-up {
   background-color: white;
@@ -1381,6 +1421,11 @@ footer input {
   .personal-info form .lent , .lent button{
     width: 100%;
   }
+
+  .success-modal {
+    left: 6%;
+    width: 90%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -1576,6 +1621,10 @@ footer input {
 
   .pop-details div {
     width: 100%;
+  }
+
+  .success-modal {
+    left: 20%;
   }
 }
 

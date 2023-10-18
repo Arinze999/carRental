@@ -49,6 +49,14 @@ const modalConfirm = document.getElementById("m-confirm");
 // Error modal elements
 const modal = document.getElementById("errorMessageModal");
 
+// success modal
+const successModal = document.querySelector(".success-modal");
+const closeSmodal = document.querySelector(".s-close");
+
+closeSmodal.addEventListener("click", () => {
+  successModal.classList.toggle("show-success");
+});
+
 // form
 const carType = document.getElementById("car-type");
 const requestBtn = document.getElementById("request");
@@ -323,8 +331,8 @@ requestBtn.addEventListener("click", (e) => {
   } else {
     modal.style.display = "block";
     // Hide modal after 2 seconds
-    setTimeout(function() {
-        modal.style.display = "none";
+    setTimeout(function () {
+      modal.style.display = "none";
     }, 1000);
   }
 });
@@ -352,7 +360,6 @@ modalConfirm.addEventListener("click", (e) => {
   e.preventDefault();
   const areAllInputsFilled = checkInputs(infoInputs);
   if (areAllInputsFilled) {
-    alert("CONFIRMED!")
     navMain.classList.toggle("blurry");
     headerMain.classList.toggle("blurry");
     mainPage.classList.toggle("blurry");
@@ -364,7 +371,11 @@ modalConfirm.addEventListener("click", (e) => {
     dropOffDate.value = "";
     infoInputs.map((each) => {
       each.value = "";
-    })
+    });
+    successModal.classList.toggle("show-success");
+    setTimeout(function () {
+      successModal.classList.toggle("show-success");
+    }, 1500);
     if (document.body.style.overflow !== "hidden") {
       document.body.style.overflow = "hidden";
     } else {
@@ -372,13 +383,8 @@ modalConfirm.addEventListener("click", (e) => {
     }
   } else {
     modal.style.display = "block";
-    setTimeout(function() {
-        modal.style.display = "none";
+    setTimeout(function () {
+      modal.style.display = "none";
     }, 1000);
   }
 });
-
-
-
-
-

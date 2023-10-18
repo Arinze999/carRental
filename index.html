@@ -12,17 +12,25 @@
     <title>car | Buddy</title>
   </head>
   <body>
-
     <div id="errorMessageModal" class="modal">
       <div class="modal-content">
-          <p>PLEASE FILL ALL DETAILS!</p>
+        <p>PLEASE FILL ALL DETAILS!</p>
       </div>
-  </div>
+    </div>
+
+    <div class="success-modal">
+      <div class="s-box"><img src="assets\img\icons8-success-64.png" alt="good.jpg" /></div>
+      <div class="s-info">
+        <h3>CONFIRMED SUCCESSFULLY!</h3>
+        <div class="s-close"><i class="fa-solid fa-xmark fa-lg"></i></div>
+      </div>
+    </div>
 
     <div class="pop-up">
       <div class="pop-title">
         <h3>
-          CONFIRM DETAILS <div id="close-pop"><i class="fa-solid fa-xmark fa-lg"></i></div>
+          CONFIRM DETAILS
+          <div id="close-pop"><i class="fa-solid fa-xmark fa-lg"></i></div>
         </h3>
         <p class="p-faint">
           Confirm, get token for car dispatcher
@@ -31,7 +39,7 @@
       <div class="pop-details">
         <div>
           <h3><i class="fa-regular fa-calendar"></i> Pick up Date & Time</h3>
-          <p id="m-pick-date" ></p>
+          <p id="m-pick-date"></p>
           <input type="time" />
           <h3><i class="fa-solid fa-location-dot"></i> Pick up Location</h3>
           <small id="m-pick-up"></small> <br />
@@ -44,11 +52,7 @@
         </div>
         <div>
           <h3>Car <span id="m-car">Passat</span></h3>
-          <img
-            id="m-car-img"
-            src=""
-            alt="s.car"
-          />
+          <img id="m-car-img" src="" alt="s.car" />
         </div>
       </div>
       <div class="personal-info">
@@ -75,11 +79,13 @@
             <input type="text" />
           </div>
           <div class="lent">
-            <label for="">Email<span class="required">*</span></label><br />
+            <label for="">Email<span class="required">*</span></label
+            ><br />
             <input type="text" />
           </div>
           <div class="lent">
-            <label for="">Address<span class="required">*</span></label><br />
+            <label for="">Address<span class="required">*</span></label
+            ><br />
             <input type="text" />
           </div>
           <div>
