@@ -352,7 +352,13 @@ modalConfirm.addEventListener("click", (e) => {
   e.preventDefault();
   const areAllInputsFilled = checkInputs(infoInputs);
   if (areAllInputsFilled) {
-    alert("CONFIRMED!")
+    modal.style.display = "block";
+    modalContent = modal.querySelector(".modal-content");
+    modalContent.innerText = "CONFIRMED SUCCESFULLY";
+    modalContent.style.backgroundColor = "lawngreen";
+    setTimeout(function() {
+        modal.style.display = "none";
+    }, 1000);
     navMain.classList.toggle("blurry");
     headerMain.classList.toggle("blurry");
     mainPage.classList.toggle("blurry");
@@ -372,7 +378,6 @@ modalConfirm.addEventListener("click", (e) => {
     }
   } else {
     modal.style.display = "block";
-    // Hide modal after 2 seconds
     setTimeout(function() {
         modal.style.display = "none";
     }, 1000);
