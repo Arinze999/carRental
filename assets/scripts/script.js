@@ -388,3 +388,14 @@ modalConfirm.addEventListener("click", (e) => {
     }, 1000);
   }
 });
+
+// extra 
+const headerBtn = document.querySelector(".header-btn").querySelector(".btn-action").addEventListener("click" , ()=> {
+  var scrollHere= document.getElementById("form");
+  scrollHere.scrollIntoView({ behavior: "smooth" });
+});
+
+const goLearn = document.querySelector(".btn-black").addEventListener("click" , ()=> {
+  var scrollHere= document.getElementById("learn");
+  scrollHere.scrollIntoView({ behavior: "smooth" });
+})
