@@ -19,7 +19,9 @@
     </div>
 
     <div class="success-modal">
-      <div class="s-box"><img src="assets\img\icons8-success-64.png" alt="good.jpg" /></div>
+      <div class="s-box">
+        <img src="assets\img\icons8-success-64.png" alt="good.jpg" />
+      </div>
       <div class="s-info">
         <h3>CONFIRMED SUCCESSFULLY!</h3>
         <div class="s-close"><i class="fa-solid fa-xmark fa-lg"></i></div>
@@ -138,12 +140,16 @@
             flexible pick-up options and much more.
           </p>
           <div class="header-btn">
-            <button class="btn-action">
-              Book Ride <i class="fa-regular fa-square-check"></i>
-            </button>
-            <button class="btn-black">
-              Learn More <i class="fa-solid fa-right-long"></i>
-            </button>
+            <a href="#form">
+              <button class="btn-action">
+                Book Ride <i class="fa-regular fa-square-check"></i>
+              </button>
+            </a>
+            <a href="#learn">
+              <button class="btn-black">
+                Learn More <i class="fa-solid fa-right-long"></i>
+              </button>
+            </a>
           </div>
         </div>
         <div class="right">
@@ -156,7 +162,7 @@
     </header>
 
     <main>
-      <section>
+      <section id="form">
         <form class="book-ride close-book">
           <div><h3>Book a Car</h3></div>
           <div class="form-row">
@@ -225,7 +231,7 @@
                 <input id="drop-date" type="date" />
               </div>
               <div>
-                <button id="request" class="btn-action">Book Now</button>
+                <button id="request" class="btn-action">Request</button>
               </div>
             </div>
           </div>
@@ -354,7 +360,7 @@
                     <td>Diesel</td>
                   </tr>
                 </table>
-                <button class="btn-action">Reserve</button>
+                <a href="#form"><button class="btn-action">Reserve</button></a>
               </div>
             </div>
           </div>
@@ -368,7 +374,7 @@
         <p>Local Suppliers. and <span>24/7</span> Support.</p>
       </section>
 
-      <section>
+      <section id="learn">
         <div class="choose-us-parent">
           <div class="cars-bg-poster">
             <img src="assets\img\cars-Banner2main.png" alt="cars.bgPoster" />
@@ -392,9 +398,11 @@
                 chance to save big.
               </p>
               <div class="find-details-button">
-                <button class="btn-action">
-                  Find Details
-                </button>
+                <a href="#car-models">
+                  <button class="btn-action">
+                    Find Details
+                  </button>
+                </a>
               </div>
             </div>
             <div class="choose-child">
@@ -509,39 +517,28 @@
                 <i class="fa-solid fa-chevron-down fa-lg faq-icon"></i> Why is
                 it important to compare car deals on rentals? <br />
                 <small class="p-faint answer">
-                  Comparing rental car deals is important as it helps find the
-                  best deal that fits your budget and requirements, ensuring you
-                  get the most value for your money. By comparing various
-                  options, you can find deals that offer lower prices,
-                  additional services, or better car models. You can find car
-                  rental deals by researching online and comparing prices from
-                  different rental companies.
+                  Comparing car rental deals is essential to ensure you get the
+                  best value, lowest rates, and most suitable vehicle for your
+                  specific needs and budget.
                 </small>
               </li>
               <li class="item-faq">
                 <i class="fa-solid fa-chevron-down fa-lg"></i> How do i find a
                 prestigous car rental deal? <br />
                 <small class="p-faint answer">
-                  Comparing rental car deals is important as it helps find the
-                  best deal that fits your budget and requirements, ensuring you
-                  get the most value for your money. By comparing various
-                  options, you can find deals that offer lower prices,
-                  additional services, or better car models. You can find car
-                  rental deals by researching online and comparing prices from
-                  different rental companies.
+                  To secure a prestigious car rental deal, research and compare
+                  options from reputable rental agencies, consider joining
+                  loyalty programs, and leverage discounts or promotions when
+                  available
                 </small>
               </li>
               <li class="item-faq">
                 <i class="fa-solid fa-chevron-down fa-lg"></i> How long can i be
                 in possession of a rental? <br />
                 <small class="p-faint answer">
-                  Comparing rental car deals is important as it helps find the
-                  best deal that fits your budget and requirements, ensuring you
-                  get the most value for your money. By comparing various
-                  options, you can find deals that offer lower prices,
-                  additional services, or better car models. You can find car
-                  rental deals by researching online and comparing prices from
-                  different rental companies.
+                  The duration of possession for a rented car typically depends
+                  on the terms of the rental agreement, which can vary from a
+                  few hours to several weeks or more.
                 </small>
               </li>
             </ul>
